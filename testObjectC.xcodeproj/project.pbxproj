@@ -17,7 +17,7 @@
 		FC6C39E825E0EF700005CC0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39E725E0EF700005CC0A /* main.m */; };
 		FC6C39F225E0EF700005CC0A /* testObjectCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39F125E0EF700005CC0A /* testObjectCTests.m */; };
 		FC6C39FD25E0EF700005CC0A /* testObjectCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39FC25E0EF700005CC0A /* testObjectCUITests.m */; };
-		FC9E412D25E752520029964A /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9E412C25E752520029964A /* Test.m */; };
+		FCD6BA1426005B0900E01C26 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA1326005B0900E01C26 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,8 @@
 		FC6C39F825E0EF700005CC0A /* testObjectCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testObjectCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6C39FC25E0EF700005CC0A /* testObjectCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testObjectCUITests.m; sourceTree = "<group>"; };
 		FC6C39FE25E0EF700005CC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC9E412C25E752520029964A /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		FCD6BA1226005B0900E01C26 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		FCD6BA1326005B0900E01C26 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,8 @@
 		FC6C39D125E0EF6E0005CC0A /* testObjectC */ = {
 			isa = PBXGroup;
 			children = (
+				FCD6BA1226005B0900E01C26 /* Student.h */,
+				FCD6BA1326005B0900E01C26 /* Student.m */,
 				FC6C39D225E0EF6E0005CC0A /* AppDelegate.h */,
 				FC6C39D325E0EF6E0005CC0A /* AppDelegate.m */,
 				FC6C39D525E0EF6E0005CC0A /* SceneDelegate.h */,
@@ -119,7 +122,6 @@
 				FC6C39E325E0EF700005CC0A /* LaunchScreen.storyboard */,
 				FC6C39E625E0EF700005CC0A /* Info.plist */,
 				FC6C39E725E0EF700005CC0A /* main.m */,
-				FC9E412C25E752520029964A /* Test.m */,
 				FC6C39DE25E0EF6E0005CC0A /* testObjectC.xcdatamodeld */,
 			);
 			path = testObjectC;
@@ -275,7 +277,7 @@
 				FC6C39E825E0EF700005CC0A /* main.m in Sources */,
 				FC6C39DA25E0EF6E0005CC0A /* ViewController.m in Sources */,
 				FC6C39D425E0EF6E0005CC0A /* AppDelegate.m in Sources */,
-				FC9E412D25E752520029964A /* Test.m in Sources */,
+				FCD6BA1426005B0900E01C26 /* Student.m in Sources */,
 				FC6C39E025E0EF6E0005CC0A /* testObjectC.xcdatamodeld in Sources */,
 				FC6C39D725E0EF6E0005CC0A /* SceneDelegate.m in Sources */,
 			);
