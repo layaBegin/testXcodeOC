@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
++(int)personWithA1:(float) a1 andA2:(NSString*)a2;//类方法的创建
+-(int)personWithA1:(float) a1 andA2:(NSString*)a2;//对象方法的创建
 
 @end
 
