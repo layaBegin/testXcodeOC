@@ -18,6 +18,8 @@
 		FC6C39F225E0EF700005CC0A /* testObjectCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39F125E0EF700005CC0A /* testObjectCTests.m */; };
 		FC6C39FD25E0EF700005CC0A /* testObjectCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39FC25E0EF700005CC0A /* testObjectCUITests.m */; };
 		FCD6BA1426005B0900E01C26 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA1326005B0900E01C26 /* Student.m */; };
+		FCD6BA472601F1DD00E01C26 /* Person+category.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA462601F1DD00E01C26 /* Person+category.m */; };
+		FCD6BA4D2601F22C00E01C26 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA4C2601F22C00E01C26 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		FC6C39FE25E0EF700005CC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD6BA1226005B0900E01C26 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		FCD6BA1326005B0900E01C26 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		FCD6BA452601F1DD00E01C26 /* Person+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+category.h"; sourceTree = "<group>"; };
+		FCD6BA462601F1DD00E01C26 /* Person+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+category.m"; sourceTree = "<group>"; };
+		FCD6BA4B2601F22C00E01C26 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FCD6BA4C2601F22C00E01C26 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,10 @@
 				FC6C39E625E0EF700005CC0A /* Info.plist */,
 				FC6C39E725E0EF700005CC0A /* main.m */,
 				FC6C39DE25E0EF6E0005CC0A /* testObjectC.xcdatamodeld */,
+				FCD6BA452601F1DD00E01C26 /* Person+category.h */,
+				FCD6BA462601F1DD00E01C26 /* Person+category.m */,
+				FCD6BA4B2601F22C00E01C26 /* Person.h */,
+				FCD6BA4C2601F22C00E01C26 /* Person.m */,
 			);
 			path = testObjectC;
 			sourceTree = "<group>";
@@ -275,6 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6C39E825E0EF700005CC0A /* main.m in Sources */,
+				FCD6BA472601F1DD00E01C26 /* Person+category.m in Sources */,
+				FCD6BA4D2601F22C00E01C26 /* Person.m in Sources */,
 				FC6C39DA25E0EF6E0005CC0A /* ViewController.m in Sources */,
 				FC6C39D425E0EF6E0005CC0A /* AppDelegate.m in Sources */,
 				FCD6BA1426005B0900E01C26 /* Student.m in Sources */,
