@@ -7,6 +7,14 @@
 
 #import "Person.h"
 
-@implementation Person
 
+@interface Person()
+@property(nonatomic,copy) NSString *stringExtension;
+-(void)testExtension;
+@end
+
+@implementation Person
+-(void)testExtension{
+    NSLog(@"====测试扩展类");
+}
 @end
