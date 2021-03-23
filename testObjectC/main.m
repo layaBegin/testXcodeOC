@@ -28,11 +28,18 @@ int main(int argc, char * argv[]) {
 //    stu.score = 90.5;
 //    [stu display];
     //测试扩展类
-    Person
     //测试类方法和对象方法
-    [Person personWithA1:3.5 andA2:@"测试类方法"];
+//    [Person personWithA1:3.5 andA2:@"测试类方法"];
+//    Person *person = [[Person alloc]init];
+//    [person personWithA1:33.23 andA2:@"对象方法"];
+    
+    //属性，点语法
     Person *person = [[Person alloc]init];
-    [person personWithA1:33.23 andA2:@"对象方法"];
+    person.name = @"aser";
+    [person setName:@"直接调用属性"];//直接调用属性方法
+    NSString  *str = person.name;
+    [person Display];
+    NSLog(@"%@",str);
     
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }

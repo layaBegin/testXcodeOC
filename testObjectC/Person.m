@@ -15,16 +15,25 @@
 @end
 
 @implementation Person
--(void)testExtension{
-    NSLog(@"====测试类扩展中声明的方法");
-}
+//-(void)testExtension{
+//    NSLog(@"====测试类扩展中声明的方法");
+//}
+//
+//+(int)personWithA1:(float)a1 andA2:(NSString*)a2{
+//    NSLog(@"类方法第一个参数：%f，第二个参数：%@",a1,a2);
+//    return 0;
+//}
+//-(int)personWithA1:(float)a1 andA2:(NSString*)a2{
+//    NSLog(@"对象方法第一个参数：%f，第二个参数：%@",a1,a2);
+//    return 0;
+//}
 
-+(int)personWithA1:(float)a1 andA2:(NSString*)a2{
-    NSLog(@"类方法第一个参数：%f，第二个参数：%@",a1,a2);
-    return 0;
+//@synthesize name = _name;
+
+-(void)Display{
+    NSLog(@"%@",self.name);
 }
--(int)personWithA1:(float)a1 andA2:(NSString*)a2{
-    NSLog(@"对象方法第一个参数：%f，第二个参数：%@",a1,a2);
-    return 0;
-}
+//-(NSString *)name{
+//    return _name;
+//}
 @end

@@ -9,9 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person : NSObject
-+(int)personWithA1:(float) a1 andA2:(NSString*)a2;//类方法的创建
--(int)personWithA1:(float) a1 andA2:(NSString*)a2;//对象方法的创建
+@interface Person : NSObject//{
+//+(int)personWithA1:(float) a1 andA2:(NSString*)a2;//类方法的创建
+//-(int)personWithA1:(float) a1 andA2:(NSString*)a2;//对象方法的创建
+
+//oc中点语法（属性 实际上调用的是get set方法）
+    //NSString * _name;
+    
+//}
+-(void)Display;
+@property NSString * name;
 
 @end
 
