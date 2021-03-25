@@ -7,18 +7,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "Student.h"
-#import "Person.h"
 #import "Person+category.h"
 #import "Children.h"
 #import "Nanny.h"
+#import "testinstance/Person1.h"
+#import "testinstance/Car.h"
 
 int main(int argc, char * argv[]) {
-    NSString * appDelegateClassName;
-    @autoreleasepool {
-        // Setup code that might create autoreleased objects goes here.
-        appDelegateClassName = NSStringFromClass([AppDelegate class]);
-    }
+   
 //    int a = 100;
 //    float f = 3.98;
 //    char *b = "sdfsdf";// c 语言中的字符串
@@ -55,13 +51,25 @@ int main(int argc, char * argv[]) {
 //    [person eat];
 //    [person execuse];
     
-    //协议
-    Children *child = [[Children alloc]init];
-    Nanny *nanny = [[Nanny alloc]init];
-    child.delegrage = nanny;
-    if ([child.delegrage respondsToSelector:@selector(eat)]) {
-        [child.delegrage eat];
-    }
+//    //协议
+//    Children *child = [[Children alloc]init];
+//    Nanny *nanny = [[Nanny alloc]init];
+//    child.delegrage = nanny;
+//    if ([child.delegrage respondsToSelector:@selector(eat)]) {
+//        [child.delegrage eat];
+//        [child.delegrage takeCare];
+//    }
     
-    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
+    //单例
+    Person1 * ZhangSan=[[Person1 alloc] init];
+       
+    Person1 * LiSi=[[Person1 alloc] init];
+   
+    [LiSi displayWithDriveHours:5];
+   
+    [ZhangSan displayWithDriveHours:10];
+    [LiSi displayWithDriveHours:3];
+    Car *car = [Car car];
+    NSLog(@"driveHors:%d",car.driveHours);
+    return 0;
 }

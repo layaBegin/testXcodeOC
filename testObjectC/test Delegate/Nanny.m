@@ -11,4 +11,7 @@
 -(void)eat{
     NSLog(@"nanny代理中执行 eat方法");
 }
+-(void)takeCare{
+    NSLog(@"执行takeCare");
+}
 @end

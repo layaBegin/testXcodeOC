@@ -22,6 +22,8 @@
 		FCD6BA4D2601F22C00E01C26 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA4C2601F22C00E01C26 /* Person.m */; };
 		FCD6BA54260CC29D00E01C26 /* Children.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA53260CC29D00E01C26 /* Children.m */; };
 		FCD6BA5D260CC37B00E01C26 /* Nanny.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA5C260CC37A00E01C26 /* Nanny.m */; };
+		FCD6BA6A260CCBBC00E01C26 /* Person1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA69260CCBBC00E01C26 /* Person1.m */; };
+		FCD6BA73260CCBCE00E01C26 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA72260CCBCE00E01C26 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		FCD6BA53260CC29D00E01C26 /* Children.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Children.m; sourceTree = "<group>"; };
 		FCD6BA5B260CC37A00E01C26 /* Nanny.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nanny.h; sourceTree = "<group>"; };
 		FCD6BA5C260CC37A00E01C26 /* Nanny.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nanny.m; sourceTree = "<group>"; };
+		FCD6BA68260CCBBC00E01C26 /* Person1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person1.h; sourceTree = "<group>"; };
+		FCD6BA69260CCBBC00E01C26 /* Person1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person1.m; sourceTree = "<group>"; };
+		FCD6BA71260CCBCE00E01C26 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		FCD6BA72260CCBCE00E01C26 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		FC6C39D125E0EF6E0005CC0A /* testObjectC */ = {
 			isa = PBXGroup;
 			children = (
+				FCD6BA67260CCBA800E01C26 /* testinstance */,
 				FCD6BA51260CC27300E01C26 /* test Delegate */,
 				FCD6BA1226005B0900E01C26 /* Student.h */,
 				FCD6BA1326005B0900E01C26 /* Student.m */,
@@ -171,6 +178,17 @@
 				FCD6BA5C260CC37A00E01C26 /* Nanny.m */,
 			);
 			path = "test Delegate";
+			sourceTree = "<group>";
+		};
+		FCD6BA67260CCBA800E01C26 /* testinstance */ = {
+			isa = PBXGroup;
+			children = (
+				FCD6BA68260CCBBC00E01C26 /* Person1.h */,
+				FCD6BA69260CCBBC00E01C26 /* Person1.m */,
+				FCD6BA71260CCBCE00E01C26 /* Car.h */,
+				FCD6BA72260CCBCE00E01C26 /* Car.m */,
+			);
+			path = testinstance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +322,11 @@
 			files = (
 				FC6C39E825E0EF700005CC0A /* main.m in Sources */,
 				FCD6BA472601F1DD00E01C26 /* Person+category.m in Sources */,
+				FCD6BA6A260CCBBC00E01C26 /* Person1.m in Sources */,
 				FCD6BA4D2601F22C00E01C26 /* Person.m in Sources */,
 				FC6C39DA25E0EF6E0005CC0A /* ViewController.m in Sources */,
 				FCD6BA5D260CC37B00E01C26 /* Nanny.m in Sources */,
+				FCD6BA73260CCBCE00E01C26 /* Car.m in Sources */,
 				FC6C39D425E0EF6E0005CC0A /* AppDelegate.m in Sources */,
 				FCD6BA1426005B0900E01C26 /* Student.m in Sources */,
 				FC6C39E025E0EF6E0005CC0A /* testObjectC.xcdatamodeld in Sources */,
@@ -417,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
