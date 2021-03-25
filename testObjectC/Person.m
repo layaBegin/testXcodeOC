@@ -7,12 +7,12 @@
 
 #import "Person.h"
 
-//类扩展
-@interface Person()
-//类扩展，就是给这个类添加私有属性或方法用的。在类扩展中声明的属性和方法外界是看不到的（这些属性或者方法只是在本类中使用）
-@property(nonatomic,copy) NSString *stringExtension;
--(void)testExtension;
-@end
+////类扩展
+//@interface Person()
+////类扩展，就是给这个类添加私有属性或方法用的。在类扩展中声明的属性和方法外界是看不到的（这些属性或者方法只是在本类中使用）
+//@property(nonatomic,copy) NSString *stringExtension;
+//-(void)testExtension;
+//@end
 
 @implementation Person
 //-(void)testExtension{

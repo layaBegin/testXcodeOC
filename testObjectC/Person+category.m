@@ -8,5 +8,7 @@
 #import "Person+category.h"
 
 @implementation Person (category)
-
+-(void)eat{
+    NSLog(@"吃饭");
+}
 @end

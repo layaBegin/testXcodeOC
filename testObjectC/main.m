@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Student.h"
 #import "Person.h"
+#import "Person+category.h"
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
@@ -42,10 +43,15 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"%@",str);
     
     //动态类型 动态绑定
+//    Person *person = [[Person alloc]init];
+//    id person1 = [[NSObject alloc]init];
+//    [person execuse];
+    //[person1 execuse];//会报错
+    
+    //类别
     Person *person = [[Person alloc]init];
-    id person1 = [[NSObject alloc]init];
+    [person eat];
     [person execuse];
-    [person1 execuse];//会报错
     
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }

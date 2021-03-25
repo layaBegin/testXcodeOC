@@ -11,6 +11,7 @@
 
 @interface Person (category)
 
+-(void)eat;
 @end
 
 
