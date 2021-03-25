@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 //}
 -(void)Display;
 @property NSString * name;
-
+-(void)execuse;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -36,4 +36,7 @@
 //-(NSString *)name{
 //    return _name;
 //}
+-(void)execuse{
+    NSLog(@"执行excuse");
+}
 @end

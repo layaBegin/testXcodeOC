@@ -34,12 +34,18 @@ int main(int argc, char * argv[]) {
 //    [person personWithA1:33.23 andA2:@"对象方法"];
     
     //属性，点语法
+//    Person *person = [[Person alloc]init];
+//    person.name = @"aser";
+//    [person setName:@"直接调用属性"];//直接调用属性方法
+//    NSString  *str = person.name;
+//    [person Display];
+//    NSLog(@"%@",str);
+    
+    //动态类型 动态绑定
     Person *person = [[Person alloc]init];
-    person.name = @"aser";
-    [person setName:@"直接调用属性"];//直接调用属性方法
-    NSString  *str = person.name;
-    [person Display];
-    NSLog(@"%@",str);
+    id person1 = [[NSObject alloc]init];
+    [person execuse];
+    [person1 execuse];//会报错
     
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
