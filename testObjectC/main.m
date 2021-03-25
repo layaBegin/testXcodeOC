@@ -10,6 +10,8 @@
 #import "Student.h"
 #import "Person.h"
 #import "Person+category.h"
+#import "Children.h"
+#import "Nanny.h"
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
@@ -49,9 +51,17 @@ int main(int argc, char * argv[]) {
     //[person1 execuse];//会报错
     
     //类别
-    Person *person = [[Person alloc]init];
-    [person eat];
-    [person execuse];
+//    Person *person = [[Person alloc]init];
+//    [person eat];
+//    [person execuse];
+    
+    //协议
+    Children *child = [[Children alloc]init];
+    Nanny *nanny = [[Nanny alloc]init];
+    child.delegrage = nanny;
+    if ([child.delegrage respondsToSelector:@selector(eat)]) {
+        [child.delegrage eat];
+    }
     
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
