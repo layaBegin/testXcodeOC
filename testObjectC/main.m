@@ -60,16 +60,67 @@ int main(int argc, char * argv[]) {
 //        [child.delegrage takeCare];
 //    }
     
-    //单例
-    Person1 * ZhangSan=[[Person1 alloc] init];
-       
-    Person1 * LiSi=[[Person1 alloc] init];
-   
-    [LiSi displayWithDriveHours:5];
-   
-    [ZhangSan displayWithDriveHours:10];
-    [LiSi displayWithDriveHours:3];
-    Car *car = [Car car];
-    NSLog(@"driveHors:%d",car.driveHours);
+//    //单例
+//    Person1 * ZhangSan=[[Person1 alloc] init];
+//
+//    Person1 * LiSi=[[Person1 alloc] init];
+//
+//    [LiSi displayWithDriveHours:5];
+//
+//    [ZhangSan displayWithDriveHours:10];
+//    [LiSi displayWithDriveHours:3];
+//    Car *car = [Car car];
+//    NSLog(@"driveHors:%d",car.driveHours);
+    
+    //NSString
+    //stringWithFormat
+//    int count =5;
+//    NSString *str = [NSString stringWithFormat:@"the count is %d",count];
+//    NSLog(@"%@",str);
+//
+//    //获取字符串长度 [str length]
+//    NSLog(@"%ld",[str length]);
+    
+    
+//    NSString *str1 = @"ABCDEEEdfsdffwe";
+//    NSString *str2 = @"3434";
+//    //判断字符串是否相等 isEqualToString  1  相等，2，不相等
+//    NSLog(@"%d",[str1 isEqualToString:str2]);
+//
+//    //字符串比较大小 compare - (NSComparisonResult)compare:(NSString *)string;-1 小于，0 等于，1 大于
+//    NSLog(@"%d",[str1 compare: str2]);//
+//
+//    //判断字符串内是否包含另一字符串 1,包含，0不包含
+//    NSLog(@"%d",[str1 containsString:str2]);
+    
+    //NSMutbaleString这个类中，提供了在原有字符串基础上进行增删改的方法。
+//    在原有字符串上添加一个字符串：
+//    - (void)appendString:(NSString *)aString;
+//    - (void)appendFormat:(NSString *)format, ...
+//
+//    -(void)insertString:(NSString*)aString atIndex:(NSUInteger)loc;
+    NSMutableString *str = [NSMutableString stringWithString:@"0123456"];
+    NSString *str1 = @"terf";
+    //[str insertString:str1 atIndex:1];
+    //[str appendFormat:@"%@",str1];
+    [str appendString:str1];
+    NSLog(@"%@",str);
+    
+    
+//    在原有字符串上删除特定部分的字符串：
+//    - (void)deleteCharactersInRange:(NSRange)range;
+//
+//    补充：在这里用到NSRange这个类型，NSRange是Foundation给我们提供的创建的结构体，它的结构是这样的：
+//    typedef struct _NSRange {
+//    NSUInteger location;
+//    NSUInteger length;
+//    } NSRange;
+//    NSMutableString *str = [NSMutableString stringWithString:@"0123456789"];
+//    NSRange range;
+//    range.location = 2;
+//    range.length = 3;
+//    [str deleteCharactersInRange:range];
+//    NSLog(@"%@",str);
+    
     return 0;
 }
