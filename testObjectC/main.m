@@ -60,7 +60,7 @@ int main(int argc, char * argv[]) {
 //        [child.delegrage takeCare];
 //    }
     
-//    //单例
+//    //单例----------------------------------------------------
 //    Person1 * ZhangSan=[[Person1 alloc] init];
 //
 //    Person1 * LiSi=[[Person1 alloc] init];
@@ -72,7 +72,7 @@ int main(int argc, char * argv[]) {
 //    Car *car = [Car car];
 //    NSLog(@"driveHors:%d",car.driveHours);
     
-    //NSString
+    //NSString -------------------------------------------------
     //stringWithFormat
 //    int count =5;
 //    NSString *str = [NSString stringWithFormat:@"the count is %d",count];
@@ -99,12 +99,12 @@ int main(int argc, char * argv[]) {
 //    - (void)appendFormat:(NSString *)format, ...
 //
 //    -(void)insertString:(NSString*)aString atIndex:(NSUInteger)loc;
-    NSMutableString *str = [NSMutableString stringWithString:@"0123456"];
-    NSString *str1 = @"terf";
-    //[str insertString:str1 atIndex:1];
-    //[str appendFormat:@"%@",str1];
-    [str appendString:str1];
-    NSLog(@"%@",str);
+//    NSMutableString *str = [NSMutableString stringWithString:@"0123456"];
+//    NSString *str1 = @"terf";
+//    //[str insertString:str1 atIndex:1];
+//    //[str appendFormat:@"%@",str1];
+//    [str appendString:str1];
+//    NSLog(@"%@",str);
     
     
 //    在原有字符串上删除特定部分的字符串：
@@ -121,6 +121,30 @@ int main(int argc, char * argv[]) {
 //    range.length = 3;
 //    [str deleteCharactersInRange:range];
 //    NSLog(@"%@",str);
+    
+    //NSArray--------------------------------
+//    NSArray *array = [NSArray arrayWithObjects:@"0",@"1",@"2",nil];
+//    NSArray *array1 = [[NSArray alloc]initWithObjects:@"3",@"4",@"5", nil ];
+//    NSInteger count = array1.count;
+//    NSString *str = [array1 objectAtIndex:1];
+//    //NSLog(@"the array is %@,and count is %ld,indexstr is %@",array1,count,str);
+//    NSInteger contain = [array containsObject:@"1"];
+//    NSLog(@"the object is contain %ld",contain);
+    
+    //NSMutableArray的使用
+    NSMutableArray *arrary = [NSMutableArray arrayWithObjects:@"0",@"1",@"2", nil];
+    NSMutableArray *addArray = [NSMutableArray arrayWithObjects:@"3",@"4",@"5", nil];
+    //[arrary addObject:@"r"];
+    [arrary addObjectsFromArray:addArray];
+    NSLog(@"the array is %@",arrary);
+    [arrary removeObject:@"2"];
+    NSLog(@"the array is %@",arrary);
+    //[arrary removeAllObjects];
+    //NSLog(@"啥也不是%@",arrary);
+    [arrary replaceObjectAtIndex:2 withObject:@"d"];
+    NSLog(@"after replace%@",arrary);
+    
+    
     
     return 0;
 }
