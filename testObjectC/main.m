@@ -132,19 +132,46 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"the object is contain %ld",contain);
     
     //NSMutableArray的使用
-    NSMutableArray *arrary = [NSMutableArray arrayWithObjects:@"0",@"1",@"2", nil];
-    NSMutableArray *addArray = [NSMutableArray arrayWithObjects:@"3",@"4",@"5", nil];
-    //[arrary addObject:@"r"];
-    [arrary addObjectsFromArray:addArray];
-    NSLog(@"the array is %@",arrary);
-    [arrary removeObject:@"2"];
-    NSLog(@"the array is %@",arrary);
-    //[arrary removeAllObjects];
-    //NSLog(@"啥也不是%@",arrary);
-    [arrary replaceObjectAtIndex:2 withObject:@"d"];
-    NSLog(@"after replace%@",arrary);
+//    NSMutableArray *arrary = [NSMutableArray arrayWithObjects:@"0",@"1",@"2", nil];
+//    NSMutableArray *addArray = [NSMutableArray arrayWithObjects:@"3",@"4",@"5", nil];
+//    //[arrary addObject:@"r"];
+//    [arrary addObjectsFromArray:addArray];
+//    NSLog(@"the array is %@",arrary);
+//    [arrary removeObject:@"2"];
+//    NSLog(@"the array is %@",arrary);
+//    //[arrary removeAllObjects];
+//    //NSLog(@"啥也不是%@",arrary);
+//    [arrary replaceObjectAtIndex:2 withObject:@"d"];
+//    NSLog(@"after replace%@",arrary);
     
+    //NSDictionary 字典---------------------------------------------------
+//    NSDictionary *dic = [NSDictionary dictionaryWithObject:@"object1" forKey:@"key"];
+//    //NSLog(@"the dic is %@",dic);
+//    NSDictionary *dic1 = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"object1",@"object2",@"object3", nil]     forKeys:[NSArray arrayWithObjects:@"key1",@"key2",@"key3", nil] ];
+//    NSLog(@"thedic1 is %@",dic1);
+//    NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:@"object1",@"key1",@"object2",@"key2",@"object3",@"key3", nil];
+//    NSLog(@"thedic1 is %@",dic2);
+//    NSDictionary *dic3 = [[NSDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"o1",@"o2", nil] forKeys:[NSArray arrayWithObjects:@"key1",@"key2", nil]];
+//    NSLog(@"thedic1 is %@",dic3);
+//
+//    NSInteger i = [dic1 isEqualToDictionary:dic2];
+//    NSLog(@"is equal %ld",i);
+//
+//    NSString *str = [dic1 objectForKey:@"key2"];
+//    NSLog(@"for key is %@",str);
+//    NSArray *keys = dic1.allKeys;
+//    NSArray *values = dic1.allValues;
+//    NSLog(@"the keys are %@",keys);
+//    NSLog(@"the values are %@",values);
     
+    //NSMutableDictionary的使用
+    NSMutableDictionary *muDic = [[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"object1",@"object2", nil] forKeys:[NSArray arrayWithObjects:@"key1",@"key2", nil]];
+    NSLog(@"===mudic is %@",muDic);
+    [muDic setObject:@"object3" forKey:@"key3"];
+    NSLog(@"===mudic is %@",muDic);
+    [muDic removeObjectForKey:@"key1"];
+    
+    NSLog(@"===mudic is %@",muDic);
     
     return 0;
 }
