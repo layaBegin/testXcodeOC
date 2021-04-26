@@ -165,13 +165,22 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"the values are %@",values);
     
     //NSMutableDictionary的使用
-    NSMutableDictionary *muDic = [[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"object1",@"object2", nil] forKeys:[NSArray arrayWithObjects:@"key1",@"key2", nil]];
-    NSLog(@"===mudic is %@",muDic);
-    [muDic setObject:@"object3" forKey:@"key3"];
-    NSLog(@"===mudic is %@",muDic);
-    [muDic removeObjectForKey:@"key1"];
+//    NSMutableDictionary *muDic = [[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"object1",@"object2", nil] forKeys:[NSArray arrayWithObjects:@"key1",@"key2", nil]];
+//    NSLog(@"===mudic is %@",muDic);
+//    [muDic setObject:@"object3" forKey:@"key3"];
+//    NSLog(@"===mudic is %@",muDic);
+//    [muDic removeObjectForKey:@"key1"];
+//
+//    NSLog(@"===mudic is %@",muDic);
     
-    NSLog(@"===mudic is %@",muDic);
+    //NSDate NSDateFormatter
+    NSDate *date = [NSDate date];
+    NSLog(@"时间：%@",date);
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"YYYY-MM---dd hh:mm"];
+    NSString *str = [formatter stringFromDate:date];
+    NSLog(@"时间1:%@",str);
+    
     
     return 0;
 }
