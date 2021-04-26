@@ -173,14 +173,38 @@ int main(int argc, char * argv[]) {
 //
 //    NSLog(@"===mudic is %@",muDic);
     
-    //NSDate NSDateFormatter
-    NSDate *date = [NSDate date];
-    NSLog(@"时间：%@",date);
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"YYYY-MM---dd hh:mm"];
-    NSString *str = [formatter stringFromDate:date];
-    NSLog(@"时间1:%@",str);
+    //NSDate NSDateFormatter---------------------------------------
+//    NSDate *date = [NSDate date];
+//    NSLog(@"时间：%@",date);
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    [formatter setDateFormat:@"YYYY-MM---dd hh:mm"];
+//    NSString *str = [formatter stringFromDate:date];
+//    NSLog(@"时间1:%@",str);
     
+    //NSData  二进制文件
+//    NSString *str = @"http://test1.cc";
+//    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"data: %@",data);
+//    NSString *strcopy = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+//    NSLog(@"strcopy: %@",strcopy);
     
+    //OC中的包裹类 NSNumber NSValue 解决OC语言中的存储类型所存储的都是对象，C语言中的int等基本数据类型无法存到数组、字典中
+    int a = 3;
+    NSNumber *num = [[NSNumber alloc]initWithInt:a];
+    NSLog(@"%@",num);
+    NSArray *arr = [NSArray arrayWithObjects:num, nil];
+    NSLog(@"arr:%@",arr);
+    NSNumber *num1 = [arr objectAtIndex:0];
+    NSLog(@"num1:%@",num1);
+    int getNum = [num1 intValue];
+    NSLog(@"getNum:%d",getNum);
+    
+    NSRange range;
+    range.length = 2;
+    range.location  = 1;
+    NSValue *value = [NSValue valueWithRange:range];
+    NSLog(@"value %@",value);
+    NSRange range1 = [value rangeValue];
+    NSLog(@"%lu,%lu",(unsigned long)range1.length,(unsigned long)range1.location);
     return 0;
 }
