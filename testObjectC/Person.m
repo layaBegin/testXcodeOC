@@ -30,13 +30,13 @@
 
 //@synthesize name = _name;
 
--(void)Display{
-    NSLog(@"%@",self.name);
-}
-//-(NSString *)name{
-//    return _name;
+//-(void)Display{
+//    NSLog(@"%@",self.name);
 //}
--(void)execuse{
-    NSLog(@"执行excuse");
-}
+////-(NSString *)name{
+////    return _name;
+////}
+//-(void)execuse{
+//    NSLog(@"执行excuse");
+//}
 @end

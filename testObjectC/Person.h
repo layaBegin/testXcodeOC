@@ -17,9 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
     //NSString * _name;
     
 //}
--(void)Display;
-@property NSString * name;
--(void)execuse;
+//-(void)Display;
+//@property NSString * name;
+//-(void)execuse;
+@property (nonatomic,copy)NSString *name;
+@property (nonatomic,assign)int age;
+@property (nonatomic,assign)int sex;
+
 @end
 
 NS_ASSUME_NONNULL_END

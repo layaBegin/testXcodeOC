@@ -13,6 +13,7 @@
 #import "testinstance/Person1.h"
 #import "testinstance/Car.h"
 #import "testNSNotificationCenter/Worker.h"
+#import "Person.h"
 
 int main(int argc, char * argv[]) {
    
@@ -209,8 +210,22 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"%lu,%lu",(unsigned long)range1.length,(unsigned long)range1.location);
     
     //NSNotificationCenter ---------------------------
-    Worker *worker = [[Worker alloc]init];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"canMake" object:nil];
-    [[NSNotificationCenter defaultCenter]removeObserver:worker name:@"canMake" object:nil];
+//    Worker *worker = [[Worker alloc]init];
+//    [[NSNotificationCenter defaultCenter]postNotificationName:@"canMake" object:nil];
+//    [[NSNotificationCenter defaultCenter]removeObserver:worker name:@"canMake" object:nil];//用完之后一定要移除监听；
+    
+    //kvc kvo------------------------------------------------
+    Person *person = [[Person alloc]init];
+//    [person setValue:@"lishi" forKey:@"name"];
+//    [person setValue:[NSNumber numberWithInt:4] forKey:@"age"];
+//    [person setValue:[NSNumber numberWithBool:YES] forKey:@"sex"];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"zhangshan",[NSNumber numberWithInt:3],[NSNumber numberWithBool:YES], nil] forKeys:[NSArray arrayWithObjects:@"name",@"age",@"sex",nil]];
+    [person setValuesForKeysWithDictionary:dic];
+    
+    NSLog(@"%@,%d,%d",person.name,person.age,person.sex);
+    NSLog(@"%@,%@,%@",[person valueForKey:@"name"],[person valueForKey:@"age"],[person valueForKey:@"sex"]);
+    
+    
     return 0;
 }
