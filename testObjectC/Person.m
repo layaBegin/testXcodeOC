@@ -39,4 +39,8 @@
 //-(void)execuse{
 //    NSLog(@"执行excuse");
 //}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    NSLog(@"%@",change);
+}
 @end

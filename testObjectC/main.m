@@ -215,16 +215,28 @@ int main(int argc, char * argv[]) {
 //    [[NSNotificationCenter defaultCenter]removeObserver:worker name:@"canMake" object:nil];//用完之后一定要移除监听；
     
     //kvc kvo------------------------------------------------
-    Person *person = [[Person alloc]init];
+    //Person *person = [[Person alloc]init];
 //    [person setValue:@"lishi" forKey:@"name"];
 //    [person setValue:[NSNumber numberWithInt:4] forKey:@"age"];
 //    [person setValue:[NSNumber numberWithBool:YES] forKey:@"sex"];
     
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"zhangshan",[NSNumber numberWithInt:3],[NSNumber numberWithBool:YES], nil] forKeys:[NSArray arrayWithObjects:@"name",@"age",@"sex",nil]];
-    [person setValuesForKeysWithDictionary:dic];
+//    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithObjects:[NSArray arrayWithObjects:@"zhangshan",[NSNumber numberWithInt:3],[NSNumber numberWithBool:YES], nil] forKeys:[NSArray arrayWithObjects:@"name",@"age",@"sex",nil]];
+//    [person setValuesForKeysWithDictionary:dic];
+//
+//    NSLog(@"%@,%d,%d",person.name,person.age,person.sex);
+//    NSLog(@"%@,%@,%@",[person valueForKey:@"name"],[person valueForKey:@"age"],[person valueForKey:@"sex"]);
     
-    NSLog(@"%@,%d,%d",person.name,person.age,person.sex);
-    NSLog(@"%@,%@,%@",[person valueForKey:@"name"],[person valueForKey:@"age"],[person valueForKey:@"sex"]);
+    //kvo----------------------------------------------------
+    Person *person = [[Person alloc]init];
+    person.age = 3;
+    person.name = @"zhangsan";
+    person.sex = 2;
+    [person addObserver:person forKeyPath:@"age" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+    [person addObserver:person forKeyPath:@"name" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+    person.age =10;
+    person.name = @"lishi";
+    [person removeObserver:person forKeyPath:@"name"];
+    [person removeObserver:person forKeyPath:@"age"];
     
     
     return 0;
