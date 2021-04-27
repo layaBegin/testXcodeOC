@@ -17,6 +17,7 @@
 		FC6C39E825E0EF700005CC0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39E725E0EF700005CC0A /* main.m */; };
 		FC6C39F225E0EF700005CC0A /* testObjectCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39F125E0EF700005CC0A /* testObjectCTests.m */; };
 		FC6C39FD25E0EF700005CC0A /* testObjectCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C39FC25E0EF700005CC0A /* testObjectCUITests.m */; };
+		FC9D6BD62637DA1A0013CEC5 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9D6BD52637DA1A0013CEC5 /* Worker.m */; };
 		FCD6BA1426005B0900E01C26 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA1326005B0900E01C26 /* Student.m */; };
 		FCD6BA472601F1DD00E01C26 /* Person+category.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA462601F1DD00E01C26 /* Person+category.m */; };
 		FCD6BA4D2601F22C00E01C26 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA4C2601F22C00E01C26 /* Person.m */; };
@@ -63,6 +64,8 @@
 		FC6C39F825E0EF700005CC0A /* testObjectCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testObjectCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6C39FC25E0EF700005CC0A /* testObjectCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testObjectCUITests.m; sourceTree = "<group>"; };
 		FC6C39FE25E0EF700005CC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC9D6BD42637DA1A0013CEC5 /* Worker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
+		FC9D6BD52637DA1A0013CEC5 /* Worker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Worker.m; sourceTree = "<group>"; };
 		FCD6BA1226005B0900E01C26 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		FCD6BA1326005B0900E01C26 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		FCD6BA452601F1DD00E01C26 /* Person+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+category.h"; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		FC6C39D125E0EF6E0005CC0A /* testObjectC */ = {
 			isa = PBXGroup;
 			children = (
+				FC9D6BD32637D9FD0013CEC5 /* testNSNotificationCenter */,
 				FCD6BA67260CCBA800E01C26 /* testinstance */,
 				FCD6BA51260CC27300E01C26 /* test Delegate */,
 				FCD6BA1226005B0900E01C26 /* Student.h */,
@@ -167,6 +171,15 @@
 				FC6C39FE25E0EF700005CC0A /* Info.plist */,
 			);
 			path = testObjectCUITests;
+			sourceTree = "<group>";
+		};
+		FC9D6BD32637D9FD0013CEC5 /* testNSNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				FC9D6BD42637DA1A0013CEC5 /* Worker.h */,
+				FC9D6BD52637DA1A0013CEC5 /* Worker.m */,
+			);
+			path = testNSNotificationCenter;
 			sourceTree = "<group>";
 		};
 		FCD6BA51260CC27300E01C26 /* test Delegate */ = {
@@ -332,6 +345,7 @@
 				FC6C39E025E0EF6E0005CC0A /* testObjectC.xcdatamodeld in Sources */,
 				FC6C39D725E0EF6E0005CC0A /* SceneDelegate.m in Sources */,
 				FCD6BA54260CC29D00E01C26 /* Children.m in Sources */,
+				FC9D6BD62637DA1A0013CEC5 /* Worker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
