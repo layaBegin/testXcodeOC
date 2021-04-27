@@ -227,17 +227,28 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"%@,%@,%@",[person valueForKey:@"name"],[person valueForKey:@"age"],[person valueForKey:@"sex"]);
     
     //kvo----------------------------------------------------
-    Person *person = [[Person alloc]init];
-    person.age = 3;
-    person.name = @"zhangsan";
-    person.sex = 2;
-    [person addObserver:person forKeyPath:@"age" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
-    [person addObserver:person forKeyPath:@"name" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
-    person.age =10;
-    person.name = @"lishi";
-    [person removeObserver:person forKeyPath:@"name"];
-    [person removeObserver:person forKeyPath:@"age"];
+//    Person *person = [[Person alloc]init];
+//    person.age = 3;
+//    person.name = @"zhangsan";
+//    person.sex = 2;
+//    [person addObserver:person forKeyPath:@"age" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+//    [person addObserver:person forKeyPath:@"name" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+//    person.age =10;
+//    person.name = @"lishi";
+//    [person removeObserver:person forKeyPath:@"name"];
+//    [person removeObserver:person forKeyPath:@"age"];
+//
     
+    //NSPredicate 筛选过滤 ---------------------------------------
+    //+(NSPredicate*)predicateWithFormat:(NSString*)predicateFormat,...;
+    NSArray *array = [NSArray arrayWithObjects:[Person personWithName:@"zhangshan" andage:3],[Person personWithName:@"lishi" andage:29],[Person personWithName:@"wangwu" andage:19], nil];
+    
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"age > 18"];
+    NSArray *filterArr = [array filteredArrayUsingPredicate:pred];
+    for (Person *person in filterArr){
+        NSLog(@"%@,%d",person.name,person.age);
+    }
+   
     
     return 0;
 }

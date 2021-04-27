@@ -40,7 +40,14 @@
 //    NSLog(@"执行excuse");
 //}
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    NSLog(@"%@",change);
+//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+//    NSLog(@"%@",change);
+//}
+
++(instancetype)personWithName:(NSString *)name andage:(int)age{
+    Person *person = [[Person alloc]init];
+    person.name = name;
+    person.age = age;
+    return person;
 }
 @end

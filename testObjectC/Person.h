@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)int age;
 @property (nonatomic,assign)int sex;
 
++(instancetype)personWithName:(NSString *)name andage:(int)age ;
 @end
 
 NS_ASSUME_NONNULL_END
