@@ -15,6 +15,8 @@
 #import "testNSNotificationCenter/Worker.h"
 #import "Person.h"
 
+
+int num = 10;
 int main(int argc, char * argv[]) {
    
 //    int a = 100;
@@ -28,13 +30,13 @@ int main(int argc, char * argv[]) {
 //    stu.age = 10;
 //    stu.score = 90.5;
 //    [stu display];
-    //测试扩展类
+    //测试扩展类------------------------------------------------------------------------------------------------------------------
     //测试类方法和对象方法
 //    [Person personWithA1:3.5 andA2:@"测试类方法"];
 //    Person *person = [[Person alloc]init];
 //    [person personWithA1:33.23 andA2:@"对象方法"];
     
-    //属性，点语法
+    //属性，点语法--------------------------------------------------------------------------------------------------------------
 //    Person *person = [[Person alloc]init];
 //    person.name = @"aser";
 //    [person setName:@"直接调用属性"];//直接调用属性方法
@@ -53,7 +55,7 @@ int main(int argc, char * argv[]) {
 //    [person eat];
 //    [person execuse];
     
-//    //协议
+//    //delegrage协议-----------------------------------------------------------------------------------------------------------
 //    Children *child = [[Children alloc]init];
 //    Nanny *nanny = [[Nanny alloc]init];
 //    child.delegrage = nanny;
@@ -62,7 +64,7 @@ int main(int argc, char * argv[]) {
 //        [child.delegrage takeCare];
 //    }
     
-//    //单例----------------------------------------------------
+//    //单例-------------------------------------------------------------------------------------------------------------
 //    Person1 * ZhangSan=[[Person1 alloc] init];
 //
 //    Person1 * LiSi=[[Person1 alloc] init];
@@ -74,7 +76,7 @@ int main(int argc, char * argv[]) {
 //    Car *car = [Car car];
 //    NSLog(@"driveHors:%d",car.driveHours);
     
-    //NSString -------------------------------------------------
+    //NSString ----------------------------------------------------------------------------------------------------------
     //stringWithFormat
 //    int count =5;
 //    NSString *str = [NSString stringWithFormat:@"the count is %d",count];
@@ -124,7 +126,7 @@ int main(int argc, char * argv[]) {
 //    [str deleteCharactersInRange:range];
 //    NSLog(@"%@",str);
     
-    //NSArray--------------------------------
+    //NSArray-----------------------------------------------------------------------------------------
 //    NSArray *array = [NSArray arrayWithObjects:@"0",@"1",@"2",nil];
 //    NSArray *array1 = [[NSArray alloc]initWithObjects:@"3",@"4",@"5", nil ];
 //    NSInteger count = array1.count;
@@ -146,7 +148,7 @@ int main(int argc, char * argv[]) {
 //    [arrary replaceObjectAtIndex:2 withObject:@"d"];
 //    NSLog(@"after replace%@",arrary);
     
-    //NSDictionary 字典---------------------------------------------------
+    //NSDictionary 字典------------------------------------------------------------------------------------------------------------
 //    NSDictionary *dic = [NSDictionary dictionaryWithObject:@"object1" forKey:@"key"];
 //    //NSLog(@"the dic is %@",dic);
 //    NSDictionary *dic1 = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"object1",@"object2",@"object3", nil]     forKeys:[NSArray arrayWithObjects:@"key1",@"key2",@"key3", nil] ];
@@ -175,7 +177,7 @@ int main(int argc, char * argv[]) {
 //
 //    NSLog(@"===mudic is %@",muDic);
     
-    //NSDate NSDateFormatter---------------------------------------
+    //NSDate NSDateFormatter------------------------------------------------------------------------------------------------
 //    NSDate *date = [NSDate date];
 //    NSLog(@"时间：%@",date);
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -209,12 +211,12 @@ int main(int argc, char * argv[]) {
 //    NSRange range1 = [value rangeValue];
 //    NSLog(@"%lu,%lu",(unsigned long)range1.length,(unsigned long)range1.location);
     
-    //NSNotificationCenter ---------------------------
+    //NSNotificationCenter ------------------------------------------------------------------------------------
 //    Worker *worker = [[Worker alloc]init];
 //    [[NSNotificationCenter defaultCenter]postNotificationName:@"canMake" object:nil];
 //    [[NSNotificationCenter defaultCenter]removeObserver:worker name:@"canMake" object:nil];//用完之后一定要移除监听；
     
-    //kvc kvo------------------------------------------------
+    //kvc kvo---------------------------------------------------------------------------------------------------------
     //Person *person = [[Person alloc]init];
 //    [person setValue:@"lishi" forKey:@"name"];
 //    [person setValue:[NSNumber numberWithInt:4] forKey:@"age"];
@@ -226,7 +228,7 @@ int main(int argc, char * argv[]) {
 //    NSLog(@"%@,%d,%d",person.name,person.age,person.sex);
 //    NSLog(@"%@,%@,%@",[person valueForKey:@"name"],[person valueForKey:@"age"],[person valueForKey:@"sex"]);
     
-    //kvo----------------------------------------------------
+    //kvo-------------------------------------------------------------------------------------------------------------
 //    Person *person = [[Person alloc]init];
 //    person.age = 3;
 //    person.name = @"zhangsan";
@@ -239,16 +241,52 @@ int main(int argc, char * argv[]) {
 //    [person removeObserver:person forKeyPath:@"age"];
 //
     
-    //NSPredicate 筛选过滤 ---------------------------------------
+    //NSPredicate 筛选过滤 --------------------------------------------------------------------------------------------
     //+(NSPredicate*)predicateWithFormat:(NSString*)predicateFormat,...;
-    NSArray *array = [NSArray arrayWithObjects:[Person personWithName:@"zhangshan" andage:3],[Person personWithName:@"lishi" andage:29],[Person personWithName:@"wangwu" andage:19], nil];
-    
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"age > 18"];
-    NSArray *filterArr = [array filteredArrayUsingPredicate:pred];
-    for (Person *person in filterArr){
-        NSLog(@"%@,%d",person.name,person.age);
-    }
+//    NSArray *array = [NSArray arrayWithObjects:[Person personWithName:@"zhangshan" andage:3],[Person personWithName:@"lishi" andage:29],[Person personWithName:@"wangwu" andage:19], nil];
+//
+//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"age > 18"];
+//    NSArray *filterArr = [array filteredArrayUsingPredicate:pred];
+//    for (Person *person in filterArr){
+//        NSLog(@"%@,%d",person.name,person.age);
+//    }
    
+    //block代码块----------------------------------------------------------------------------------
+    void (^helloworld)(void);//block 的声明；
+    helloworld = ^(void){//赋值
+        NSLog(@"block hello");
+    };
+    helloworld();//实现
+    
+    //在使用代码块的时候，对于全局变量，在块内是完全可操作的。
+    //但是对于局部变量来说，在块内只能使用不能更改。
+    //如果试图在块内更改局部变量的值，程序会报错，解决的方案是在声明局部变量时添加__block关键字（注意是两个“_”）：
+    __block int i = 5;
+    int m = 9;
+    void (^blo)() = ^{
+        
+        NSLog(@"i:%d,num:%d,m:%d",i,num,m);
+        num ++;
+        i++;
+       // m++;
+    };
+    blo();
+    NSLog(@"i:%d,num:%d,m:%d",i,num,m);
+    
+    NSArray *arr = [NSArray arrayWithObjects:@"1",@"5",@"8",@"6",@"0",@"4", nil];
+    NSArray *sortarr = [arr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        int a = [obj1 intValue];
+        int b =  [obj2 intValue];
+        return a > b ? -1 : 1;
+    }];
+    
+    NSLog(@"%@",sortarr);
+    
+    //通过block 实现参数的传递
+    Person *person = [[Person alloc]init];
+    [person testb:^(NSString * _Nonnull name, int age) {
+        NSLog(@"%@,%d",name ,age);
+    }];
     
     return 0;
 }

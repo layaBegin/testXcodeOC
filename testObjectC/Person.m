@@ -44,10 +44,17 @@
 //    NSLog(@"%@",change);
 //}
 
-+(instancetype)personWithName:(NSString *)name andage:(int)age{
-    Person *person = [[Person alloc]init];
-    person.name = name;
-    person.age = age;
-    return person;
+//+(instancetype)personWithName:(NSString *)name andage:(int)age{
+//    Person *person = [[Person alloc]init];
+//    person.name = name;
+//    person.age = age;
+//    return person;
+//}
+
+-(void)testb:(myblock)myb{
+    NSString *name = @"zhangshan";
+    int age = 34;
+    myb(name, age);
+
 }
 @end
