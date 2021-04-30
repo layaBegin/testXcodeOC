@@ -252,41 +252,55 @@ int main(int argc, char * argv[]) {
 //    }
    
     //block代码块----------------------------------------------------------------------------------
-    void (^helloworld)(void);//block 的声明；
-    helloworld = ^(void){//赋值
-        NSLog(@"block hello");
-    };
-    helloworld();//实现
+//    void (^helloworld)(void);//block 的声明；
+//    helloworld = ^(void){//赋值
+//        NSLog(@"block hello");
+//    };
+//    helloworld();//实现
     
     //在使用代码块的时候，对于全局变量，在块内是完全可操作的。
     //但是对于局部变量来说，在块内只能使用不能更改。
     //如果试图在块内更改局部变量的值，程序会报错，解决的方案是在声明局部变量时添加__block关键字（注意是两个“_”）：
-    __block int i = 5;
-    int m = 9;
-    void (^blo)() = ^{
-        
-        NSLog(@"i:%d,num:%d,m:%d",i,num,m);
-        num ++;
-        i++;
-       // m++;
-    };
-    blo();
-    NSLog(@"i:%d,num:%d,m:%d",i,num,m);
+//    __block int i = 5;
+//    int m = 9;
+//    void (^blo)() = ^{
+//
+//        NSLog(@"i:%d,num:%d,m:%d",i,num,m);
+//        num ++;
+//        i++;
+//       // m++;
+//    };
+//    blo();
+//    NSLog(@"i:%d,num:%d,m:%d",i,num,m);
+//
+//    NSArray *arr = [NSArray arrayWithObjects:@"1",@"5",@"8",@"6",@"0",@"4", nil];
+//    NSArray *sortarr = [arr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+//        int a = [obj1 intValue];
+//        int b =  [obj2 intValue];
+//        return a > b ? -1 : 1;
+//    }];
+//
+//    NSLog(@"%@",sortarr);
+//
+//    //通过block 实现参数的传递
+//    Person *person = [[Person alloc]init];
+//    [person testb:^(NSString * _Nonnull name, int age) {
+//        NSLog(@"%@,%d",name ,age);
+//    }];
     
-    NSArray *arr = [NSArray arrayWithObjects:@"1",@"5",@"8",@"6",@"0",@"4", nil];
-    NSArray *sortarr = [arr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        int a = [obj1 intValue];
-        int b =  [obj2 intValue];
-        return a > b ? -1 : 1;
-    }];
     
-    NSLog(@"%@",sortarr);
+    //数据存储到文件--------------------------------------------------------------------------------------------------------
     
-    //通过block 实现参数的传递
-    Person *person = [[Person alloc]init];
-    [person testb:^(NSString * _Nonnull name, int age) {
-        NSLog(@"%@,%d",name ,age);
-    }];
     
+    NSString *path = @"/Users/yunteng/Desktop/test.txt";
+    //NSString *str = @"testdataSave";
+    //NSError * error = nil;
+    //[str writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    
+//    NSArray *arr = [NSArray arrayWithObjects:@"1",@"2",@"4",@"3", nil];
+//    [arr writeToFile:path atomically:YES];
+    
+    NSArray *arrget = [NSArray arrayWithContentsOfFile:path];
+    NSLog(@"array is :%@",arrget);
     return 0;
 }
