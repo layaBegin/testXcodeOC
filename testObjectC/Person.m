@@ -51,10 +51,26 @@
 //    return person;
 //}
 
--(void)testb:(myblock)myb{
-    NSString *name = @"zhangshan";
-    int age = 34;
-    myb(name, age);
+//-(void)testb:(myblock)myb{
+//    NSString *name = @"zhangshan";
+//    int age = 34;
+//    myb(name, age);
+//
+//}
 
+-(void)encodeWithCoder:(NSCoder *)acoder{
+    //在这个方法中要对类中声明的每个属性都进行归档；
+    [acoder encodeObject:self.name forKey:@"name"];
+    [acoder encodeInt:self.age forKey:@"age"];
+    [acoder encodeBool:self.sex forKey:@"sex"];
+    
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self.name=[aDecoder decodeObjectForKey:@"name"];
+    self.sex=[aDecoder decodeBoolForKey:@"sex"];
+    self.age=[aDecoder decodeIntForKey:@"age"];
+//通过查找键找出对应的属性值，而这个键值就是在归档时候设置的值。
+return self;
 }
 @end

@@ -290,9 +290,7 @@ int main(int argc, char * argv[]) {
     
     
     //数据存储到文件--------------------------------------------------------------------------------------------------------
-    
-    
-    NSString *path = @"/Users/yunteng/Desktop/test.txt";
+    //NSString *path = @"/Users/yunteng/Desktop/test.txt";
     //NSString *str = @"testdataSave";
     //NSError * error = nil;
     //[str writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
@@ -300,7 +298,46 @@ int main(int argc, char * argv[]) {
 //    NSArray *arr = [NSArray arrayWithObjects:@"1",@"2",@"4",@"3", nil];
 //    [arr writeToFile:path atomically:YES];
     
-    NSArray *arrget = [NSArray arrayWithContentsOfFile:path];
-    NSLog(@"array is :%@",arrget);
+//    NSArray *arrget = [NSArray arrayWithContentsOfFile:path];
+//    NSLog(@"array is :%@",arrget);
+    
+    
+    //归档 解档------------------------------------------------------------------------------------------------------
+    NSString *path = @"/Users/yunteng/Desktop/test.txt";
+    //归档单个
+//    Person *person = [[Person alloc]init];
+//    person.name = @"zhangshan";
+//    person.age = 18;
+//    person.sex =3;
+//    [NSKeyedArchiver archiveRootObject:person toFile:path];
+    //解档单个
+//    Person *person  = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+//    NSLog(@"%@,%d,%d",person.name,person.age,person.sex);
+    //归档多个对象
+//    Person *person1 = [[Person alloc]init];
+//    Person *person2 = [[Person alloc]init];
+//    person1.name = @"zhangshan";
+//    person1.age = 19;
+//    person1.sex = 55;
+//    person2.name = @"lishi";
+//    person2.age =  89;
+//    person2.sex = 2;
+//
+//    NSMutableData *data = [NSMutableData data];
+//    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc]initForWritingWithMutableData:data];
+//    [archiver encodeObject:person1 forKey:@"person1"];
+//    [archiver encodeObject:person2 forKey:@"person2"];
+//    [archiver finishEncoding];
+//    [data writeToFile:path atomically:YES];
+    
+    //解档多个
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSKeyedUnarchiver *unchariver = [[NSKeyedUnarchiver alloc]initForReadingWithData:data];
+    Person *person1 = [unchariver decodeObjectForKey:@"person1"];
+    NSLog(@"%@,%d,%d",person1.name,person1.age,person1.sex);
+    
+    Person *person2 = [unchariver decodeObjectForKey:@"person2"];
+    NSLog(@"%@,%d,%d",person2.name,person2.age,person2.sex);
+    
     return 0;
 }

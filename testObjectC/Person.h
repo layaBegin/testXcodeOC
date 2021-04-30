@@ -20,9 +20,9 @@ typedef void(^myblock)(NSString *name,int age);
 //-(void)Display;
 //@property NSString * name;
 //-(void)execuse;
-//@property (nonatomic,copy)NSString *name;
-//@property (nonatomic,assign)int age;
-//@property (nonatomic,assign)int sex;
+@property (nonatomic,copy)NSString *name;
+@property (nonatomic,assign)int age;
+@property (nonatomic,assign)int sex;
 //
 //+(instancetype)personWithName:(NSString *)name andage:(int)age ;
 
