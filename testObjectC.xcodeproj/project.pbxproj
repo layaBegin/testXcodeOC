@@ -25,6 +25,7 @@
 		FCD6BA5D260CC37B00E01C26 /* Nanny.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA5C260CC37A00E01C26 /* Nanny.m */; };
 		FCD6BA6A260CCBBC00E01C26 /* Person1.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA69260CCBBC00E01C26 /* Person1.m */; };
 		FCD6BA73260CCBCE00E01C26 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6BA72260CCBCE00E01C26 /* Car.m */; };
+		FCF580B2263C006A00F52845 /* testPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCF580B1263C006A00F52845 /* testPList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		FCD6BA69260CCBBC00E01C26 /* Person1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person1.m; sourceTree = "<group>"; };
 		FCD6BA71260CCBCE00E01C26 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		FCD6BA72260CCBCE00E01C26 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		FCF580B1263C006A00F52845 /* testPList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = testPList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				FCD6BA462601F1DD00E01C26 /* Person+category.m */,
 				FCD6BA4B2601F22C00E01C26 /* Person.h */,
 				FCD6BA4C2601F22C00E01C26 /* Person.m */,
+				FCF580B1263C006A00F52845 /* testPList.plist */,
 			);
 			path = testObjectC;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6C39E525E0EF700005CC0A /* LaunchScreen.storyboard in Resources */,
+				FCF580B2263C006A00F52845 /* testPList.plist in Resources */,
 				FC6C39E225E0EF700005CC0A /* Assets.xcassets in Resources */,
 				FC6C39DD25E0EF6E0005CC0A /* Main.storyboard in Resources */,
 			);

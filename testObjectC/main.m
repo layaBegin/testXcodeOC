@@ -303,7 +303,7 @@ int main(int argc, char * argv[]) {
     
     
     //归档 解档------------------------------------------------------------------------------------------------------
-    NSString *path = @"/Users/yunteng/Desktop/test.txt";
+   // NSString *path = @"/Users/yunteng/Desktop/test.txt";
     //归档单个
 //    Person *person = [[Person alloc]init];
 //    person.name = @"zhangshan";
@@ -330,14 +330,56 @@ int main(int argc, char * argv[]) {
 //    [archiver finishEncoding];
 //    [data writeToFile:path atomically:YES];
     
-    //解档多个
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSKeyedUnarchiver *unchariver = [[NSKeyedUnarchiver alloc]initForReadingWithData:data];
-    Person *person1 = [unchariver decodeObjectForKey:@"person1"];
-    NSLog(@"%@,%d,%d",person1.name,person1.age,person1.sex);
+//    //解档多个
+//    NSData *data = [NSData dataWithContentsOfFile:path];
+//    NSKeyedUnarchiver *unchariver = [[NSKeyedUnarchiver alloc]initForReadingWithData:data];
+//    Person *person1 = [unchariver decodeObjectForKey:@"person1"];
+//    NSLog(@"%@,%d,%d",person1.name,person1.age,person1.sex);
+//
+//    Person *person2 = [unchariver decodeObjectForKey:@"person2"];
+//    NSLog(@"%@,%d,%d",person2.name,person2.age,person2.sex);
     
-    Person *person2 = [unchariver decodeObjectForKey:@"person2"];
-    NSLog(@"%@,%d,%d",person2.name,person2.age,person2.sex);
+    //Property List即.plist------------------------------------------------------------------------------------------------
+//    NSArray *array = [NSArray arrayWithObjects:@"4",@"3",@"7",@"2",@"9", nil];
+//    NSString *path = @"/Users/yunteng/Documents/xcodeProject/testXcodeOCGit/testObjectC/testPList.plist";
+//    [array writeToFile:path atomically:YES];
+    
+//    NSString *path = @"/Users/yunteng/Documents/xcodeProject/testXcodeOCGit/testObjectC";
+//    NSString *filePath = [path stringByAppendingPathComponent:@"test.plist"];
+//    NSLog(@"%@",filePath);
+//    NSArray *array = [NSArray arrayWithObjects:@"4",@"3",@"7",@"2",@"0", nil];
+//    [array writeToFile:filePath atomically:YES];
+    
+    //通过代码获取手动创建的 plist 路径；
+//    NSString *path = [[NSBundle mainBundle]pathForResource:@"testPList" ofType:@"plist"];
+//    NSLog(@"%@",path);
+//    NSArray *array = [[NSArray alloc]initWithContentsOfFile:path];
+//    NSLog(@"%@",array);
+    
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"Info" ofType:@"plist"];
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
+//    for (NSString *key in dic) {
+//        NSLog(@"%@",[dic allKeys:key]);
+//    }
+    //NSLog(@"%@",dic);
+    [dic setValue:@"add someting" forKey:@"testAdd"];
+    [dic writeToFile:path atomically:YES];
+    //NSLog(@"%@",dic);
+    //用代码方式创建.plist
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSLog(@"%@",paths);
+    NSString *plistPath1 = [paths objectAtIndex:0];
+    NSLog(@"%@",plistPath1);
+    NSString *filename = [plistPath1 stringByAppendingPathComponent:@"test1.plist"];
+    [dic writeToFile:filename atomically:YES];
+    //用代码方式创建的这种方式获取不到
+//    NSString *getplist = [[NSBundle mainBundle]pathForResource:@"test1" ofType:@"plist"];
+//    NSDictionary  *getdic = [[NSDictionary alloc]initWithContentsOfFile:getplist];
+//    NSLog(@"%@",getdic);
+    //stringByAppendingPathComponent 这个方法既能写，又能读；
+    NSString *getfilename = [plistPath1 stringByAppendingPathComponent:@"test1.plist"];
+    NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:getfilename];
+    NSLog(@"%@", data1);
     
     return 0;
 }
