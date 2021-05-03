@@ -356,30 +356,41 @@ int main(int argc, char * argv[]) {
 //    NSArray *array = [[NSArray alloc]initWithContentsOfFile:path];
 //    NSLog(@"%@",array);
     
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"Info" ofType:@"plist"];
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
-//    for (NSString *key in dic) {
-//        NSLog(@"%@",[dic allKeys:key]);
-//    }
-    //NSLog(@"%@",dic);
-    [dic setValue:@"add someting" forKey:@"testAdd"];
-    [dic writeToFile:path atomically:YES];
-    //NSLog(@"%@",dic);
-    //用代码方式创建.plist
+//    NSString *path = [[NSBundle mainBundle]pathForResource:@"Info" ofType:@"plist"];
+//    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithContentsOfFile:path];
+////    for (NSString *key in dic) {
+////        NSLog(@"%@",[dic allKeys:key]);
+////    }
+//    //NSLog(@"%@",dic);
+//    [dic setValue:@"add someting" forKey:@"testAdd"];
+//    [dic writeToFile:path atomically:YES];
+//    //NSLog(@"%@",dic);
+//    //用代码方式创建.plist
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSLog(@"%@",paths);
+//    NSString *plistPath1 = [paths objectAtIndex:0];
+//    NSLog(@"%@",plistPath1);
+//    NSString *filename = [plistPath1 stringByAppendingPathComponent:@"test1.plist"];
+//    [dic writeToFile:filename atomically:YES];
+//    //用代码方式创建的这种方式获取不到
+////    NSString *getplist = [[NSBundle mainBundle]pathForResource:@"test1" ofType:@"plist"];
+////    NSDictionary  *getdic = [[NSDictionary alloc]initWithContentsOfFile:getplist];
+////    NSLog(@"%@",getdic);
+//    //stringByAppendingPathComponent 这个方法既能写，又能读；
+//    NSString *getfilename = [plistPath1 stringByAppendingPathComponent:@"test1.plist"];
+//    NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:getfilename];
+//    NSLog(@"%@", data1);
+    
+    if  ([[[NSUserDefaults standardUserDefaults]objectForKey:@"logined"]isEqualToString:@"OK"]){
+        NSLog(@"您登陆过");
+    
+    }else{
+        [[NSUserDefaults standardUserDefaults]setValue:@"OK" forKey:@"logined"];
+        NSLog(@"你第一次登陆");
+    }
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSLog(@"%@",paths);
-    NSString *plistPath1 = [paths objectAtIndex:0];
-    NSLog(@"%@",plistPath1);
-    NSString *filename = [plistPath1 stringByAppendingPathComponent:@"test1.plist"];
-    [dic writeToFile:filename atomically:YES];
-    //用代码方式创建的这种方式获取不到
-//    NSString *getplist = [[NSBundle mainBundle]pathForResource:@"test1" ofType:@"plist"];
-//    NSDictionary  *getdic = [[NSDictionary alloc]initWithContentsOfFile:getplist];
-//    NSLog(@"%@",getdic);
-    //stringByAppendingPathComponent 这个方法既能写，又能读；
-    NSString *getfilename = [plistPath1 stringByAppendingPathComponent:@"test1.plist"];
-    NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:getfilename];
-    NSLog(@"%@", data1);
+    NSString *path = [paths lastObject];
+    NSLog(@"%@",path);//通过这个路径可以找到本地存储的.plist 文件
     
     return 0;
 }
